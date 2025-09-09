@@ -7,7 +7,7 @@ int main()
 
     scanf("%d %d", &integer1, &integer2);
     //scanf("%d", &integer2);
-    printf("integer1 %d integer2 %d", integer1, integer2);
+    printf("integer1: %d integer2: %d\n", integer1, integer2);
 
     return 0;
 }
