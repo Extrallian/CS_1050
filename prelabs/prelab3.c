@@ -21,8 +21,6 @@ int main( void ) {
         else { // Prints a new line at the end
             printf("\n");
         }
-        
-        
     };
 
 
