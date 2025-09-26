@@ -9,14 +9,15 @@ int main() {
 
     int output = 0;
 
-    do{
+    do{ //Loops the menu until the user exits
         printf("Menu:\n 1. Find Factorial\n 2. Print Fibonacci Series\n 3. Sum of Natural Numbers\n 4. Number Properties\n 5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         
         if(choice == 5) { //Exits the program before the user has to put in a number
-            return 0;
+            return 0; 
         };
+       
 
         printf("Enter a number: ");
         scanf(" %d", &number);
