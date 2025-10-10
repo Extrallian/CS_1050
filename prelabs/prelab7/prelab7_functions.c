@@ -20,7 +20,7 @@ static int total_points(int op, int value) {
             point_total *= value;
             break;
     }
-    if(point_total < 0) point_total = 0; //saftey guard; cannot go less than zero points
+    if(point_total < 0) point_total = 0; //safety guard; cannot go less than zero points
     return point_total;
 }
 
