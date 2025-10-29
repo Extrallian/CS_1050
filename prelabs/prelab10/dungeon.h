@@ -4,8 +4,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ROW 6
-#define COL 12
+#define ROW 12
+#define COL 24
+#define WALL_PROB 3
 
 // Task 1: Generate the dungeon
 void generate_dungeon(char *dungeon, int rows, int cols);

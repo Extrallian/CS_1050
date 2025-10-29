@@ -2,9 +2,9 @@
 
 void generate_dungeon(char *dungeon, int rows, int cols) {
     
-    for(int i = 0; i < (rows * cols); i++) {
+    for(int i = 0; i < (rows * cols); i++) { 
         int roll = rand() % 10;
-        *(dungeon + i) = (roll < 3) ? '#' : '.';
+        *(dungeon + i) = (roll < WALL_PROB) ? '#' : '.';
     }
 
 
@@ -33,31 +33,16 @@ void print_dungeon(const char *dungeon, int rows, int cols) {
     printf("\n0\t");
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < cols; j++) {
-            printf("%c ", *(dungeon + (j + cols * i)));
+            char cell = *(dungeon + (j + cols * i));
+            if(cell == 'S')
+                printf("\033[96mS\033[0m ");
+            else if(cell == 'E')
+                printf("\033[93mE\033[0m ");
+            else 
+                printf("\033[90m%c\033[0m ", cell);
         }
         (i < rows - 1) ? printf("\n%d\t", i + 1) : printf("\n");
     }
-//      printf("ROWS=%d COLS=%d\n", rows, cols);
-
-//     // Column ticks every 10, split across two lines to avoid long headers
-//     printf("     ");
-//     for (int c = 0; c < cols; c++) putchar((c % 10 == 0) ? '|' : ((c % 5 == 0) ? '+' : ' '));
-//     putchar('\n');
-
-//     printf("     ");
-//     for (int c = 0; c < cols; c++) {
-//         if (c % 10 == 0) putchar('0' + (c/10)%10);
-//         else putchar(' ');
-//     }
-//     putchar('\n');
-
-//     for (int r = 0; r < rows; r++) {
-//         printf("%3d [", r);                // left sentinel
-//         for (int c = 0; c < cols; c++) {
-//             putchar(*(dungeon + r*cols + c));   // EXACTLY 1 char per cell
-//         }
-//         printf("] count=%d\n", cols);      // right sentinel + explicit count
-//     }
 }
 
 void count_elements(const char *dungeon, int rows, int cols,
@@ -152,5 +137,6 @@ void move_player(char *dungeon, int rows, int cols) {
             break;
         }
 
+	printf("\r\033[K");
     }
 }
