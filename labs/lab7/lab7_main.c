@@ -1,8 +1,8 @@
 #include "lab7_prototypes.h"
 
 int main() {
-    int limit;
-    int actual;
+    int limit = 0;
+    int actual = 0;
 
     while(limit != -1 || actual != -1) {
 

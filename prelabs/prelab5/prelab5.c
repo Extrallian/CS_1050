@@ -31,16 +31,16 @@ int main() {
                 printf("Factorial of %d: %d\n", number, output);
                 break;
             case 2: //Fibonacci Series
-                int nstor;
+                int nstore = 0;
                 int n2 = 1;
                 int n1 = 0;
                 printf("Printing %d terms of the Fibonacci series: \n", number);
 
                 for(i = 1; i <= number; i++) {
                     printf("%d%s", n1, (i != number) ? " " : "\n"); //Prints the number and a space/new line depending on if it is the final term
-                    nstor = n2;
+                    nstore = n2;
                     n2 += n1;
-                    n1 = nstor;
+                    n1 = nstore;
                 };
                 break;
             case 3: //Sum of Natural Numbers

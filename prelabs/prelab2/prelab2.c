@@ -2,10 +2,10 @@
 
 int main() {
 
-    int A;
-    int B;
-    int C;
-    int D;
+    int A = 1;
+    int B = 1;
+    int C = 1;
+    int D = 1;
 
     //Asks for the inputs, %d is an integer defined by the variables outside
     //the & says to move to the variable in memory
