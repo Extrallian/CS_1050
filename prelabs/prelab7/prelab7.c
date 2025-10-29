@@ -20,13 +20,13 @@ int main() {
 
     printf("Redeem 10 points for a free drink? ");
     scanf(" %c", &y_or_n);
-    if(y_or_n == 'y')
+    if(y_or_n == 'y') {
         if(redeem_reward(10)) {
             printf("Rewards Redeemed! Remaining points: %d\n", get_total_points());
         } else {
             printf("Not enough points! Total points: %d\n", get_total_points());
-    
         }
+    }
     
     printf("Bonus day! Multipler = ");
     scanf(" %d", &multiplier);
