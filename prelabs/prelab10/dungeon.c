@@ -35,13 +35,13 @@ void print_dungeon(const char *dungeon, int rows, int cols) {
         for(int j = 0; j < cols; j++) {
             char cell = *(dungeon + (j + cols * i));
             if(cell == 'S')
-                printf("\033[96mS\033[0m ");
+                printf("\033[96mS\033[0m "); // Print S in cyan
             else if(cell == 'E')
-                printf("\033[93mE\033[0m ");
+                printf("\033[93mE\033[0m "); // Print E in cyan
             else 
-                printf("\033[90m%c\033[0m ", cell);
+                printf("\033[90m%c\033[0m ", cell); // Print . or # in a dull gray
         }
-        (i < rows - 1) ? printf("\n%d\t", i + 1) : printf("\n");
+        (i < rows - 1) ? printf("\n%d\t", i + 1) : printf("\n"); 
     }
 }
 

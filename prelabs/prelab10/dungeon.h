@@ -1,12 +1,14 @@
-#pragma once
+#pragma once // Only include this file once
 
+// Include other header files
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
+// Symbolic Constants
 #define ROW 12
 #define COL 24
-#define WALL_PROB 3
+#define WALL_PROB 2
 
 // Task 1: Generate the dungeon
 void generate_dungeon(char *dungeon, int rows, int cols);

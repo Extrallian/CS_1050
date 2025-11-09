@@ -6,6 +6,10 @@ int main() {
     int starts = 0;
     int exits = 0;
 
+    // int ROW;
+    // int COL;
+    // scanf(" %d %d", &ROW, &COL);
+
     srand(time(NULL)); // Initialize random seed
 
     char dungeon[ROW][COL];
