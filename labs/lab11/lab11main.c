@@ -7,6 +7,6 @@ int main() {
     printf("%d\n", x);
     printBackward(&array[4], 5);
     printf("REVERSED: ");
-    printf("%d\n", reverseSearch(&array[0], 5, 2));
+    printf("%d\n", reverseSearch(&array[0], 0, 2));
     return 0;
 }
