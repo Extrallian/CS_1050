@@ -109,7 +109,13 @@ struct BookRecord *extractByStatus(const struct BookRecord *books, int count, en
 
 
     BookRecord *matching_records = malloc(sizeof(BookRecord) * num_of_records);
+    if(matching_records == NULL) {
+        *outCount = 0;
+        return NULL;
+    }
+
     BookRecord *matchingPtr = matching_records;
+
     while(p < end) {
         if(p->status == status) {
             matchingPtr->id = p->id;
@@ -120,4 +126,5 @@ struct BookRecord *extractByStatus(const struct BookRecord *books, int count, en
         p++;
     }
     *outCount = num_of_records;
+    return matching_records;
 }
